@@ -1,9 +1,9 @@
-\documentclass[12pt,english,sans]{moderncv}
+\documentclass[11pt,english,sans,colorlinks=true,citecolor=black]{moderncv}
 \moderncvstyle{classic}
 \moderncvcolor{black}
 
 \usepackage[margin=1in]{geometry}
-\usepackage[firstyear=2018,lastyear=2025,
+\usepackage[firstyear=2014,lastyear=2027,
 marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 \usepackage{url}
 \usepackage{float}
@@ -11,7 +11,54 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 \usepackage{graphicx}
 \usepackage{placeins}
 \usepackage{cite}
-\usepackage{helvet}
+% \usepackage{bibentry}
+\usepackage{tikz}
+% \usepackage{natbib}
+% \nobibliography*
+\bibliographystyle{plain}
+
+
+% \renewcommand *{\bibliographyitemlabel}{[\arabic{enumiv}]}
+
+\newcommand {\RomanNumeralCaps}[1]{\MakeUppercase{\romannumeral #1}}
+
+
+\makeatletter
+\renewcommand {\tllabelcventry}[9][color1]{%
+  \tl@formatendyear{#3}
+  \tl@formatstartyear{#2}
+  \tl@splitlabels{#4}
+  \cventry{\tikz[baseline=0pt]{
+    \tl@tlcvbar
+    \fill [#1] (0,0)
+      ++(\tl@startfraction*\hintscolumnwidth,0pt)
+      node [tl@startyear] {\tl@startlabel}
+      rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width-1pt)
+      node [tl@endyear] {} % <========================\tl@endlabel
+      (\hintscolumnwidth,0pt) ;
+    \ifissince
+      \newdimen\fullcolorwidth
+      \pgfmathsetlength\fullcolorwidth{\tl@startfraction*(1+(1-\tl@startfraction)*\tl@nsfrac)*\hintscolumnwidth}
+      \shade [left color=#1,right color=#1]
+        (\tl@startfraction*\hintscolumnwidth,0)
+        rectangle (\fullcolorwidth,\tl@width);
+      \shade [left color=#1] (\fullcolorwidth,0)
+        rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);
+    \else
+      \fill [#1] (\tl@startfraction*\hintscolumnwidth,0)
+        rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);
+    \fi
+    }
+  }
+  {#5}{#6}{#7}{#8}{#9}%
+}
+\tikzset{
+    tl@startyear/.append style={
+        xshift=(0.5-\tl@startfraction)*\hintscolumnwidth,
+        anchor=base
+    }
+}
+\makeatother
 
 \tlwidth{0.8ex}
 \tltext{\tiny}
@@ -24,9 +71,148 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 \extrainfo{Ph.D. Student at Johns Hopkins University}
 
 \begin{document}
+    \hypersetup{urlcolor=blue}
     \maketitle
+    \section{Education}
+    \tlcventry[blue]{2022}{0}{Ph.D. Candidate}{}
+    {Johns Hopkins University (JHU)}{}{}
+
+    \tllabelcventry[blue]{2018}{2022}{2018--22}{B.S. Physics, B.A. Computer Science}{}
+    {University of Virginia (UVA)}{}{
+        Highest Distinction in Physics, High Distinction in Computer Science with 
+        \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis}
+    }
+
+    \tllabelcventry[blue]{2014}{2018}{2014--18}{IB \& Advanced Diploma}{}
+    {South Lakes High School}{}{}
+
+    \bibliography{cv}
+
     \section{Experience}
-    \subsection{Research}
-    \tlcventry[blue]{2018}{0}{Off-shell Higgs Boson}{Johns Hopkins University}
-    {}{}{testing}
+    \subsection{\underline{\textbf{Research}}}
+    \tlcventry[red]{2022}{0}{Off-shell Higgs Boson}{CMS Joint 4-Lepton Study Team (CJLST)}
+    {}{}{
+        \begin{itemize}
+            \item Produced constraints on the mass and width of the Higgs Boson, as well
+            as anomalous Higgs Boson couplings, with the CMS detector at CERN~\cite{JHU_offshell_SM}
+            \item Working on the $\kappa$ Framework extension included in the CMS Higgs Grand Combination
+            \item Working on new off-shell analysis examining Higgs production modes in the off-shell region
+        \end{itemize}
+    }
+    \tlcventry[red]{2022}{0}{Spin-Parity Analysis of a Tetraquark Candidate}
+    {CMS B-Physics}
+    {}{}{
+        \begin{itemize}
+            \item Finding the spin and parity of 3 low-mass resonances
+            which constitute a candidate for a tetraquark, a new type of matter
+            \item BPH-24-002 in progress
+        \end{itemize}
+    }
+    \tlcventry[red]{2022}{0}{JHUGen/JHUGen-MELA Development}
+    {Johns Hopkins University}
+    {}{}{
+        \begin{itemize}
+            \item Developer for the \href{https://spin.pha.jhu.edu/}{JHUGen Package},
+            which includes a Monte Carlo generator as well as a reweighting scheme
+            \item Created new Python bindings using PyBind11 to release a version of
+            JHUGen-MELA in Python
+            \item Writing \href{https://spin.pha.jhu.edu/MELA/}{documentation} for the JHUGen-MELA
+            package utilizing Doxygen
+            \item Version 7.5.7 released Dec. 20, 2024
+        \end{itemize}
+    }
+
+    \tllabelcventry[red]{2020}{2022}{2020--22}{Optimizing Cuts for Experimental Dead-time}
+    {Mu2e Collaboration}
+    {}{}{
+        \begin{itemize}
+            \item Utilized machine learning to minimize experimental deadtime
+            at high beam intensities
+            \item Studied the aging of test-stand di-counters for particle detection
+            \item Culminated in my Distinguished Majors Interdisciplinary 
+            \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis} in Computer Science
+        \end{itemize}
+    }
+
+    \subsection{\underline{\textbf{LHC Service Work}}}
+
+    \tlcventry[green]{2022}{0}{CMS Tracker Alignment}
+    {Tracker Alignment Group}
+    {}{}{
+        Provide alignments for the CMS tracker and validate performance over time
+    }
+
+    \tlcventry[green]{2022}{0}{Parton Showering and Filtering}
+    {CJLST}
+    {}{}{
+        \begin{itemize}
+            \item Worked in conjunction with experts to establish
+            better parton showering for off-shell Higgs Boson simulation
+            to better match data
+            \item Produced a better filter for the 4-lepton channel
+            to be used in off-shell Higgs Boson simulation
+        \end{itemize}
+    }
+
+    \section{Conference Proceedings}
+    \tldatecventry[orange]{2024}{The Higgs Boson Width and Couplings from Off-shell Production}{}{}{}{
+        USCMS Meeting -- Princeton, NJ
+    }{}
+    \tldatecventry[orange]{2024}{JHUGen-MELA Tutorial for Higgs SM EFT}{}{}{}{
+        LPC EFT Workshop -- University of Notre Dame, IN
+    }{}
+    \tldatecventry[orange]{2024}{{JHUGen-MELA Tutorial for Off-shell Higgs Study}}{}{}{}{
+        \href{https://indico.cern.ch/event/1375252/timetable/\#8-mc-generators-2-mela-tools}{LPC Off-shell Higgs Boson Workshop} -- Fermi National Accelerator Laboratory, IL
+    }{}
+    \tldatecventry[orange]{2023}{{Analysis of Hadronic Resonance Structures in the $J/\psi J/\psi$ Invariant Mass Spectrum}}{}{}{}{
+        \href{https://meetings.aps.org/Meeting/APR23/Session/C11.3}{American Physical Society April Meeting} -- Minneapolis, MN
+    }{}
+    \tldatecventry[orange]{2022}{Improvements to Cosmic Muon Identification Using Machine Learning}{}{}{}{
+        Virginia Space Grant Consortium Research Symposium -- Norfolk, VA
+    }{}
+    \tldatecventry[orange]{2021}{{Improvements to Cosmic Muon Identification Using Machine Learning}}{}{}{}{
+        \href{https://indi.to/VnVYr}{APS Meeting of the Division of Particles and Fields} -- Florida State University, FL
+    }{}
+
+
+    \section{Awards and Honors}
+    \tldatecventry[teal]{2024}{CMS IRIS-HEP Analysis Software Training (March. 2024)}{}{}{}{}{}
+    \tldatecventry[teal]{2023}{URA P5 Fermilab Travel Grant (Dec. 2023)}{}{}{}{}{}
+    \tldatecventry[teal]{2021}{Mitchell Undergraduate Research Scholarship (June. 2021)}{}{}{}{}{}
+    \tldatecventry[teal]{2021}{\href{https://vsgc.odu.edu/2021-2022awardees/}{Virginia Space Grant Consortium Research Scholarship (Apr. 2021)}}{}{}{}{}{}
+    \tldatecventry[teal]{2021}{SULI Argonne Lab REU (January 2021)}{}{}{}{
+        Accepted, did not go due conflict with research plans
+    }
+    \tldatecventry[teal]{2020}{DAAD Rise Research Fellowship REU (March 2020)}{}{}{}{
+        Accepted, cancelled due to COVID-19
+    }{}
+    \tldatecventry[teal]{2020}{SULI Jefferson Lab REU (January 2020)}{}{}{}{
+        Accepted, cancelled due to COVID-19
+    }{}
+
+    \section{Select Teaching Experience}
+    \tllabelcventry[violet]{2024/8}{2024/12}{ }{Head TA}{Classical Mechanics for Majors}{Fall 2024}{}{
+        Head TA for Physics 1 for Physics Majors
+    }
+    \tllabelcventry[violet]{2023/8}{2024/5}{ }{TA}{General Physics Lab}{Fall 2023 -- Spring 2024}{}{
+        TA for General Physics Lab 1 \& 2
+    }
+    \tllabelcventry[violet]{2020/6}{2021/6}{ }{TA}{Computer Algorithms}{Summer 2020 -- Spring 2021}{}{
+        TA for CS 4102
+    }
+    \tllabelcventry[violet]{2019/1}{2022/5}{ }{TA/Head TA}{Introductory Computer Science in Python}{Spring 2019 -- Spring 2022}{}{
+        TA and Head TA for CS 1110/1111
+    }
+
+    \section{Other Experience}
+
+    \tllabelcventry[brown]{2023/5}{2024/9}{2023--24}{Fitness Monitor}{Ralph O'Connor Rec Center}{JHU}{}{
+        Helped manage facilities, play music, and interact/help patrons at the gym
+    }
+
+    \tllabelcventry[brown]{2019/12}{2021/12}{2019--21}{Treasurer}{International Relations Organization}{UVA}{}{
+        Managed taxes and finances on the order of \$30k for the 501c3 International Relations Organization
+        at the University of Virginia
+    }
+
 \end{document}
