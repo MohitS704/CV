@@ -68,7 +68,7 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 \title{Curriculum Vitae}
 \social[orcid]{0000-0003-3603-9102}
 \social[github]{MohitS704}
-\extrainfo{Ph.D. Student at Johns Hopkins University}
+\extrainfo{Ph.D. Candidate at Johns Hopkins University}
 
 \begin{document}
     \hypersetup{urlcolor=blue}
@@ -81,8 +81,8 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 
     \tllabelcventry[blue]{2018}{2022}{2018--22}{B.S. Physics, B.A. Computer Science}{}
     {University of Virginia (UVA)}{}{
-        Highest Distinction in Physics, High Distinction in Computer Science with 
-        \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis}
+        Highest Distinction in Physics, High Distinction in Computer Science 
+        % with \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis}
     }
 
     \tllabelcventry[blue]{2014}{2018}{2014--18}{IB \& Advanced Diploma}{}
@@ -90,24 +90,23 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 
     \bibliography{cv}
 
-    \section{Experience}
-    \subsection{\underline{\textbf{Analysis Work}}}
+    \section{Analysis Work}
     \tlcventry[red]{2023}{0}{Off-shell Higgs Boson}{CMS Joint 4-Lepton Study Team (CJLST)}
     {}{}{
         \begin{itemize}
             \item Produced constraints on the mass and width of the Higgs Boson, as well
-            as anomalous Higgs Boson couplings, with the CMS detector at CERN~\cite{JHU_offshell_SM}
-            \item Working on the $\kappa$ Framework extension included in the CMS Higgs Grand Combination
-            \item Working on new off-shell analysis examining Higgs production modes in the off-shell region
+            as anomalous Higgs Boson couplings, with the CMS detector at CERN~\cite{Hayrapetyan_2025}
+            \item Collaborated to include an off-shell Higgs analysis
+            into the CMS Higgs Grand Combination for the first time
+            \item Working on a new off-shell analysis examining Higgs production modes in the off-shell region
         \end{itemize}
     }
-    \tlcventry[red]{2022}{0}{Spin-Parity Analysis of a Tetraquark Candidate}
+    \tllabelcventry[red]{2022}{2025}{2022--25}{Spin-Parity Analysis of a Tetraquark Candidate}
     {CMS B-Physics}
     {}{}{
         \begin{itemize}
             \item Finding the spin and parity of 3 low-mass resonances
-            which constitute a candidate for a tetraquark, a new type of matter
-            \item BPH-24-002 in progress
+            which constitute a candidate for a tetraquark, a new type of matter~\cite{tetraquark}
         \end{itemize}
     }
 
@@ -116,16 +115,29 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     {}{}{
         \begin{itemize}
             \item Utilized machine learning to minimize experimental deadtime
-            at high beam intensities
-            \item Studied the aging of test-stand di-counters for particle detection
-            \item Culminated in my Distinguished Majors Interdisciplinary 
-            \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis} in Computer Science
+            at high beam intensities, and 
+            studied the aging of test-stand di-counters for particle detection
+            culminating in a Distinguished Majors Interdisciplinary Thesis~\cite{DMP}.
+            % \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis} in Computer Science
+        \end{itemize}
+    }
+    
+    \newpage
+    \section{Technical Work}
+    \tlcventry[green]{2025}{0}{Lead Developer/Maintainer}
+    {MiLoMerge Package}
+    {}{}{
+        \begin{itemize}
+            \item Developer/maintainer for the \href{https://pypi.org/project/MiLoMerge/}{MiLoMerge},
+            package, designed to merge bins optimally to reduce separability loss
+            between $N$ distributions~\cite{davis2026}.
+            \item Writing \href{https://spin.pha.jhu.edu/MiLoMerge/}{documentation}
+            for the package in-line with Scikit-HEP requirements in Sphinx
+            \item Version 1.0.0 released on January 15, 2026
         \end{itemize}
     }
 
-    \subsection{\underline{\textbf{Technical Work}}}
-
-    \tlcventry[green]{2023}{0}{Parton Showering and Filtering}
+    \tllabelcventry[green]{2023}{2024}{2023--24}{Parton Showering and Filtering}
     {CJLST}
     {}{}{
         \begin{itemize}
@@ -143,23 +155,41 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
         \begin{itemize}
             \item Developer for the \href{https://spin.pha.jhu.edu/}{JHUGen Package},
             which includes a Monte Carlo generator as well as a reweighting scheme
+            for experimental high-energy physics, with the latest version
+            (v7.5.7) released Dec. 20, 2024
             \item Created new Python bindings using PyBind11 to release a version of
             JHUGen-MELA in Python
             \item Writing \href{https://spin.pha.jhu.edu/MELA/}{documentation} for the JHUGen-MELA
             package utilizing Doxygen
-            \item Version 7.5.7 released Dec. 20, 2024
         \end{itemize}
     }
 
     \tlcventry[green]{2022}{0}{CMS Tracker Alignment}
     {Tracker Alignment Group}
     {}{}{
-        Provide alignments for the CMS tracker and validate performance over time
+        \begin{itemize}
+            \item Utilize survey constraint data to provide initial constraints for the
+            High-Luminosity LHC tracker upgrade alongside teams at Cornell
+            and Fermilab
+            \item Provide alignments for the CMS tracker and validate performance over time
+        \end{itemize}
     }
 
     \section{Conference Talks \& Posters}
+    \tldatecventry[orange]{2025}{Maximizing Impact: The Quest for Optimal Observables in Experiments}{}{}{}{
+        \href{https://physics-astronomy.jhu.edu/event/hep-ex-amo-seminar-mohit-srivastav-michalis-panagiotou-jhu/}{JHU Experimental Particle Physics Seminar} -- Johns Hopkins University, MD
+    }{}
+    \tldatecventry[orange]{2025}{Blasting Off(-shell): $H^* \rightarrow ZZ \rightarrow 4\ell$ for Precision Higgs boson Measurements at CMS}{}{}{}{
+        \href{https://indico.cern.ch/event/1570736/}{Fermilab LHC Physics Center Forum} -- Fermi National Accelerator Laboratory, IL
+    }{}
+    \tldatecventry[orange]{2025}{Measurement of the Higgs boson width using the ZZ final state}{}{}{}{
+        \href{https://indico.fnal.gov/event/68477/contributions/317615/}{Fermilab Annual Users and Affiliates Meeting} -- Fermi National Accelerator Laboratory, IL
+    }{}
+    \tldatecventry[orange]{2025}{JHUGen-MELA Tutorial for Higgs SM EFT}{}{}{}{
+        \href{https://indico.fnal.gov/event/68174/contributions/316674/}{LPC EFT Workshop} -- Fermi National Accelerator Laboratory, IL
+    }{}
     \tldatecventry[orange]{2025}{Run-2 Off-shell Higgs Boson Measurements and Future Plans}{}{}{}{
-        \href{https://indico.cern.ch/event/1505287/contributions/6419438/}{Higgs Workshop} -- Rome, Italy
+        \href{https://indico.cern.ch/event/1505287/contributions/6419438/}{CMS Higgs Workshop} -- Rome, Italy
     }{}
     \tldatecventry[orange]{2024}{The Higgs Boson Width and Couplings from Off-shell Production}{}{}{}{
         USCMS Meeting -- Princeton, NJ
@@ -174,7 +204,7 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
         \href{https://meetings.aps.org/Meeting/APR23/Session/C11.3}{American Physical Society April Meeting} -- Minneapolis, MN
     }{}
     \tldatecventry[orange]{2022}{Improvements to Cosmic Muon Identification Using Machine Learning}{}{}{}{
-        Virginia Space Grant Consortium Research Symposium -- Norfolk, VA
+        \href{https://vsgc.odu.edu/wp-content/uploads/2022/07/Srivastav.pdf}{Virginia Space Grant Consortium Research Symposium} -- Norfolk, VA
     }{}
     \tldatecventry[orange]{2021}{{Improvements to Cosmic Muon Identification Using Machine Learning}}{}{}{}{
         \href{https://indi.to/VnVYr}{APS Meeting of the Division of Particles and Fields} -- Florida State University, FL
@@ -182,25 +212,26 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 
 
     \section{Awards and Honors}
+    \tldatecventry[teal]{2025}{\href{https://lpc.fnal.gov/programs/guests-visitors/current.shtml}{LPC Guest \& Visitor Award} (May 2025)}{}{}{}{}{}
     \tldatecventry[teal]{2025}{E.J. Rhee Flair in Teaching Award (May 2025)}{}{}{}{}{}
     \tldatecventry[teal]{2025}{Kupperman Family Department Travel Grant (May 2025)}{}{}{}{}{}
-    \tldatecventry[teal]{2025}{Universities Research Association Visiting Scholars Program (March 2025)}{}{}{}{}{}
+    \tldatecventry[teal]{2025}{\href{https://ura-hq.org/high-energy-physics-user-community/ura-visiting-scholars-program/vsp-awardees/}{Universities Research Association Visiting Scholars Program} (March 2025)}{}{}{}{}{}
     \tldatecventry[teal]{2024}{\href{https://indico.cern.ch/event/1383972/page/32828-meeting-participants}{CMS IRIS-HEP Analysis Software Training} (March. 2024)}{}{}{}{}{}
     \tldatecventry[teal]{2023}{URA P5 Fermilab Travel Grant (Dec. 2023)}{}{}{}{}{}
     \tldatecventry[teal]{2021}{Mitchell Undergraduate Research Scholarship (June. 2021)}{}{}{}{}{}
-    \tldatecventry[teal]{2021}{\href{https://vsgc.odu.edu/2021-2022awardees/}{Virginia Space Grant Consortium Research Scholarship (Apr. 2021)}}{}{}{}{}{}
+    \tldatecventry[teal]{2021}{\href{https://vsgc.odu.edu/2021-2022awardees/}{Virginia Space Grant Consortium Research Scholarship} (Apr. 2021)}{}{}{}{}{}
     \tldatecventry[teal]{2021}{SULI Argonne Lab (January 2021)}{}{}{}{
-        Accepted, did not go due conflict with research plans
+        Offer extended; did not accept
     }
     \tldatecventry[teal]{2020}{DAAD Rise Research Fellowship (March 2020)}{}{}{}{
-        Accepted, cancelled due to COVID-19
+        Offer extended; cancelled due to COVID-19
     }{}
     \tldatecventry[teal]{2020}{SULI Jefferson Lab (January 2020)}{}{}{}{
-        Accepted, cancelled due to COVID-19
+        Offer extended; cancelled due to COVID-19
     }{}
 
     \section{Selected Teaching Experience}
-    \tllabelcventry[violet]{2024/8}{2024/12}{ }{Head TA}{Classical Mechanics for Physics Majors}{Fall 2024}{}{
+    \tllabelcventry[violet]{2024/8}{2025/12}{ }{Head TA}{Classical Mechanics for Physics Majors}{Fall 2024, 2025}{}{
         Head TA for Physics 1 for Physics Majors
     }
     \tllabelcventry[violet]{2023/8}{2024/5}{ }{TA}{General Physics Lab}{Fall 2023 -- Spring 2024}{}{
