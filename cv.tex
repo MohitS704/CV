@@ -3,7 +3,7 @@
 \moderncvcolor{black}
 
 \usepackage[margin=1in]{geometry}
-\usepackage[firstyear=2014,lastyear=2027,
+\usepackage[firstyear=2014,lastyear=2028,
 marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 \usepackage{url}
 \usepackage{float}
@@ -21,7 +21,7 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 % \renewcommand *{\bibliographyitemlabel}{[\arabic{enumiv}]}
 
 \newcommand {\RomanNumeralCaps}[1]{\MakeUppercase{\romannumeral #1}}
-
+\renewcommand\refname{Selected Publications}
 
 \makeatletter
 \renewcommand {\tllabelcventry}[9][color1]{%
@@ -85,8 +85,8 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
         % with \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis}
     }
 
-    \tllabelcventry[blue]{2014}{2018}{2014--18}{IB \& Advanced Diploma}{}
-    {South Lakes High School}{}{}
+    % \tllabelcventry[blue]{2014}{2018}{2014--18}{IB \& Advanced Diploma}{}
+    % {South Lakes High School}{}{}
 
     \bibliography{cv}
 
@@ -94,19 +94,25 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     \tlcventry[red]{2023}{0}{Off-shell Higgs Boson}{CMS Joint 4-Lepton Study Team (CJLST)}
     {}{}{
         \begin{itemize}
-            \item Produced constraints on the mass and width of the Higgs Boson, as well
-            as anomalous Higgs Boson couplings, with the CMS detector at CERN~\cite{Hayrapetyan_2025}
+            \item Expert in off-shell analyses on CMS, working towards SM EFT interpretation of the off-shell Higgs boson
+            \item Leading efforts to calculate new k-factors for higher-order behavior in multidimensional space,
+            as presented in the LHC Higgs Working Group
+            \item Member of the local organizing committee for the 2026 LHC Physics Center Effective Field Theory (EFT)
+            at JHU
+            \item Produced leading constraints on the mass and width of the Higgs Boson as well
+            as anomalous Higgs Boson couplings with the CMS detector~\cite{Hayrapetyan_2025}
             \item Collaborated to include an off-shell Higgs analysis
-            into the CMS Higgs Grand Combination for the first time
-            \item Working on a new off-shell analysis examining Higgs production modes in the off-shell region
+            into the CMS Higgs Grand Combination for the first time~\cite{cmscollaboration2026combinedmeasurementsinterpretationshiggs}
+            % \item New off-shell analysis examining Higgs production modes in the off-shell region utilizing SM EFT
         \end{itemize}
     }
     \tllabelcventry[red]{2022}{2025}{2022--25}{Spin-Parity Analysis of a Tetraquark Candidate}
     {CMS B-Physics}
     {}{}{
         \begin{itemize}
-            \item Finding the spin and parity of 3 low-mass resonances
-            which constitute a candidate for a tetraquark, a new type of matter~\cite{tetraquark}
+            \item Found evidence for the spin and parity of 3 low-mass resonances
+            which constitute a candidate for a tetraquark~\cite{tetraquark}
+            \item Utilized techniques pioneered in the Higgs sector and developed them for use in B-physics
         \end{itemize}
     }
 
@@ -117,8 +123,9 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
             \item Utilized machine learning to minimize experimental deadtime
             at high beam intensities, and 
             studied the aging of test-stand di-counters for particle detection
-            culminating in a Distinguished Majors Interdisciplinary Thesis~\cite{DMP}.
-            % \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis} in Computer Science
+            culminating in a
+            % a Distinguished Majors Interdisciplinary Thesis~\cite{DMP}.
+            \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis} in Computer Science
         \end{itemize}
     }
     
@@ -132,7 +139,8 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
             package, designed to merge bins optimally to reduce separability loss
             between $N$ distributions~\cite{davis2026}.
             \item Writing \href{https://spin.pha.jhu.edu/MiLoMerge/}{documentation}
-            for the package in-line with Scikit-HEP requirements in Sphinx
+            and \href{https://github.com/JHUGen/MiLoMerge/tree/master/tests}{unit-tests} 
+            for MiLoMerge in-line with Scikit-HEP requirements
             \item Version 1.0.0 released on January 15, 2026
         \end{itemize}
     }
@@ -141,7 +149,7 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     {CJLST}
     {}{}{
         \begin{itemize}
-            \item Worked in conjunction with experts to establish
+            \item Worked in conjunction with experts at Fermilab to establish
             better parton showering for off-shell Higgs Boson simulation
             to better match data
             \item Produced a better filter for the 4-lepton channel
@@ -175,7 +183,11 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
         \end{itemize}
     }
 
-    \section{Conference Talks \& Posters}
+    \section{Public Talks \& Posters}
+
+    \tldatecventry[orange]{2026}{Status of k-factors for Run-3 analyses}{}{}{}{
+        \href{https://indico.cern.ch/event/1660505/}{LHC Higgs Cross Section Working Group} -- LHC Higgs Working Group
+    }{}
     \tldatecventry[orange]{2025}{Maximizing Impact: The Quest for Optimal Observables in Experiments}{}{}{}{
         \href{https://physics-astronomy.jhu.edu/event/hep-ex-amo-seminar-mohit-srivastav-michalis-panagiotou-jhu/}{JHU Experimental Particle Physics Seminar} -- Johns Hopkins University, MD
     }{}
@@ -188,12 +200,12 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     \tldatecventry[orange]{2025}{JHUGen-MELA Tutorial for Higgs SM EFT}{}{}{}{
         \href{https://indico.fnal.gov/event/68174/contributions/316674/}{LPC EFT Workshop} -- Fermi National Accelerator Laboratory, IL
     }{}
-    \tldatecventry[orange]{2025}{Run-2 Off-shell Higgs Boson Measurements and Future Plans}{}{}{}{
-        \href{https://indico.cern.ch/event/1505287/contributions/6419438/}{CMS Higgs Workshop} -- Rome, Italy
-    }{}
-    \tldatecventry[orange]{2024}{The Higgs Boson Width and Couplings from Off-shell Production}{}{}{}{
-        USCMS Meeting -- Princeton, NJ
-    }{}
+    % \tldatecventry[orange]{2025}{Run-2 Off-shell Higgs Boson Measurements and Future Plans}{}{}{}{
+    %     \href{https://indico.cern.ch/event/1505287/contributions/6419438/}{CMS Higgs Workshop} -- Rome, Italy
+    % }{}
+    % \tldatecventry[orange]{2024}{The Higgs Boson Width and Couplings from Off-shell Production}{}{}{}{
+    %     USCMS Meeting -- Princeton, NJ
+    % }{}
     \tldatecventry[orange]{2024}{JHUGen-MELA Tutorial for Higgs SM EFT}{}{}{}{
         \href{https://indico.cern.ch/event/1378665/contributions/5909698/}{LPC EFT Workshop} -- University of Notre Dame, IN
     }{}
@@ -210,23 +222,24 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
         \href{https://indi.to/VnVYr}{APS Meeting of the Division of Particles and Fields} -- Florida State University, FL
     }{}
 
-
-    \section{Awards and Honors}
+    \clearpage
+    \newpage
+    \section{Awards \& Honors}
     \tldatecventry[teal]{2025}{\href{https://lpc.fnal.gov/programs/guests-visitors/current.shtml}{LPC Guest \& Visitor Award} (May 2025)}{}{}{}{}{}
     \tldatecventry[teal]{2025}{E.J. Rhee Flair in Teaching Award (May 2025)}{}{}{}{}{}
     \tldatecventry[teal]{2025}{Kupperman Family Department Travel Grant (May 2025)}{}{}{}{}{}
-    \tldatecventry[teal]{2025}{\href{https://ura-hq.org/high-energy-physics-user-community/ura-visiting-scholars-program/vsp-awardees/}{Universities Research Association Visiting Scholars Program} (March 2025)}{}{}{}{}{}
-    \tldatecventry[teal]{2024}{\href{https://indico.cern.ch/event/1383972/page/32828-meeting-participants}{CMS IRIS-HEP Analysis Software Training} (March. 2024)}{}{}{}{}{}
+    \tldatecventry[teal]{2025}{\href{https://ura-hq.org/high-energy-physics-user-community/ura-visiting-scholars-program/vsp-awardees/}{Universities Research Association Visiting Scholars Program} (Mar. 2025)}{}{}{}{}{}
+    \tldatecventry[teal]{2024}{\href{https://indico.cern.ch/event/1383972/page/32828-meeting-participants}{CMS IRIS-HEP Analysis Software Training Travel Grant} (Mar. 2024)}{}{}{}{}{}
     \tldatecventry[teal]{2023}{URA P5 Fermilab Travel Grant (Dec. 2023)}{}{}{}{}{}
-    \tldatecventry[teal]{2021}{Mitchell Undergraduate Research Scholarship (June. 2021)}{}{}{}{}{}
+    \tldatecventry[teal]{2021}{Mitchell Undergraduate Research Scholarship (Jun. 2021)}{}{}{}{}{}
     \tldatecventry[teal]{2021}{\href{https://vsgc.odu.edu/2021-2022awardees/}{Virginia Space Grant Consortium Research Scholarship} (Apr. 2021)}{}{}{}{}{}
-    \tldatecventry[teal]{2021}{SULI Argonne Lab (January 2021)}{}{}{}{
+    \tldatecventry[teal]{2021}{SULI Argonne Lab (Jan. 2021)}{}{}{}{
         Offer extended; did not accept
     }
-    \tldatecventry[teal]{2020}{DAAD Rise Research Fellowship (March 2020)}{}{}{}{
+    \tldatecventry[teal]{2020}{DAAD Rise Research Fellowship (Mar. 2020)}{}{}{}{
         Offer extended; cancelled due to COVID-19
     }{}
-    \tldatecventry[teal]{2020}{SULI Jefferson Lab (January 2020)}{}{}{}{
+    \tldatecventry[teal]{2020}{SULI Jefferson Lab (Jan. 2020)}{}{}{}{
         Offer extended; cancelled due to COVID-19
     }{}
 
@@ -243,6 +256,17 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     \tllabelcventry[violet]{2019/1}{2022/5}{ }{TA/Head TA}{Introductory Computer Science in Python}{Spring 2019 -- Spring 2022}{}{
         TA and Head TA for CS 1110/1111
     }
+
+    \section{Physics Outreach}
+    \tldatecventry[teal]{2025}{Johns Hopkins Physics Fair Volunteer (April 2025)}{}{}{}{
+        Performed the ``Ping-pong cannon'' demo for local families and talked about shockwaves/air pressure
+    }{}
+    \tldatecventry[teal]{2026}{Fairfax Science and Engineering Fair Category Judge (March 2026)}{}{}{}{
+        Judging high school students at the regional science fair in Fairfax, Virginia
+    }{}
+    \tldatecventry[teal]{2026}{Johns Hopkins Physics Fair (April 2026)}{}{}{}{
+        Part of the LHC Exhibit
+    }{}
 
     \section{Other Experience}
 
