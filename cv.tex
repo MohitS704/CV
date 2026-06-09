@@ -11,6 +11,7 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 \usepackage{graphicx}
 \usepackage{placeins}
 \usepackage{cite}
+\usepackage{amsmath}
 % \usepackage{bibentry}
 \usepackage{tikz}
 % \usepackage{natbib}
@@ -76,12 +77,16 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     \section{Education}
     \tlcventry[blue]{2022}{0}{Ph.D. Candidate}{}
     {Johns Hopkins University (JHU)}{}{
+        Working on the Compact Muon Solenoid (CMS) experiment at the
+        Large Hadron Collider (LHC) \\
         Advisor: Professor Andrei Gritsan
     }
 
+    \qquad\\
+
     \tllabelcventry[blue]{2018}{2022}{2018--22}{B.S. Physics, B.A. Computer Science}{}
     {University of Virginia (UVA)}{}{
-        Highest Distinction in Physics, High Distinction in Computer Science 
+        Highest Distinction in Physics, High Distinction in Computer Science
         % with \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis}
     }
 
@@ -94,11 +99,12 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     \tlcventry[red]{2023}{0}{Off-shell Higgs Boson}{CMS Joint 4-Lepton Study Team (CJLST)}
     {}{}{
         \begin{itemize}
-            \item Expert in off-shell analyses on CMS, working towards SM EFT interpretation of the off-shell Higgs boson
-            \item Leading efforts to calculate new k-factors for higher-order behavior in multidimensional space,
-            as presented in the LHC Higgs Working Group
-            \item Member of the local organizing committee for the 2026 LHC Physics Center Effective Field Theory (EFT)
-            at JHU
+            \item Expert in off-shell analyses on CMS, working towards a full
+            SM EFT interpretation of the off-shell Higgs boson
+            % \item Leading efforts to calculate new k-factors for higher-order behavior in multidimensional space,
+            % as presented in the LHC Higgs Working Group
+            % \item Member of the local organizing committee for the 2026 LHC Physics Center Effective Field Theory (EFT)
+            % at JHU
             \item Produced leading constraints on the mass and width of the Higgs Boson as well
             as anomalous Higgs Boson couplings with the CMS detector~\cite{Hayrapetyan_2025}
             \item Collaborated to include an off-shell Higgs analysis
@@ -121,14 +127,14 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     {}{}{
         \begin{itemize}
             \item Utilized machine learning to minimize experimental deadtime
-            at high beam intensities, and 
+            at high beam intensities, and
             studied the aging of test-stand di-counters for particle detection
             culminating in a
             % a Distinguished Majors Interdisciplinary Thesis~\cite{DMP}.
             \href{https://csdmp.github.io/docs/srivastav2022.pdf}{Thesis} in Computer Science
         \end{itemize}
     }
-    
+
     \newpage
     \section{Technical Work}
     \tlcventry[green]{2025}{0}{Lead Developer/Maintainer}
@@ -139,16 +145,22 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
             package, designed to merge bins optimally to reduce separability loss
             between $N$ distributions~\cite{davis2026}.
             \item Writing \href{https://spin.pha.jhu.edu/MiLoMerge/}{documentation}
-            and \href{https://github.com/JHUGen/MiLoMerge/tree/master/tests}{unit-tests} 
+            and \href{https://github.com/JHUGen/MiLoMerge/tree/master/tests}{unit-tests}
             for MiLoMerge in-line with Scikit-HEP requirements
             \item Version 1.0.0 released on January 15, 2026
         \end{itemize}
     }
 
-    \tllabelcventry[green]{2023}{2024}{2023--24}{Parton Showering and Filtering}
-    {CJLST}
+    \tlcventry[green]{2025}{0}{Monte Carlo Simulation Corrections}
+    {CMS 4-lepton channel}
     {}{}{
         \begin{itemize}
+            \item Calculated simulation k-factors for the
+            dominant $\text{q}\bar{\text{q}} \to 4\ell$
+            background process and $\text{gg} \to 4\ell$
+            Higgs and diboson production processes
+            for the CMS experiment and applied them to real data,
+            as presented in the LHC Higgs Working Group
             \item Worked in conjunction with experts at Fermilab to establish
             better parton showering for off-shell Higgs Boson simulation
             to better match data
@@ -224,20 +236,48 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
         \href{https://indi.to/VnVYr}{APS Meeting of the Division of Particles and Fields} -- Florida State University, FL
     }{}
 
-    \clearpage
-    \newpage
+    % \clearpage
+    % \newpage
     \section{Awards \& Honors}
-    \tldatecventry[teal]{2026}{\href{https://physics-astronomy.jhu.edu/2026/05/04/student-awards-announced/}{Paul G. Agnew Teaching Award} (May 2026)}{}{}{}{}{}
-    \tldatecventry[teal]{2026}{\href{https://krieger.jhu.edu/our-community/teaching-award/}{Krieger School of Arts and Sciences Excellence in Teaching Award} (April 2026)}{}{}{}{}{}
-    \tldatecventry[teal]{2026}{Phenomenology 2026 Symposium Student Travel Award (April 2026)}{}{}{}{}{}
-    \tldatecventry[teal]{2025}{\href{https://lpc.fnal.gov/programs/guests-visitors/current.shtml}{LPC Guest \& Visitor Award} (May 2025)}{}{}{}{}{}
-    \tldatecventry[teal]{2025}{E.J. Rhee Flair in Teaching Award (May 2025)}{}{}{}{}{}
-    \tldatecventry[teal]{2025}{Kupperman Family Department Travel Grant (May 2025)}{}{}{}{}{}
-    \tldatecventry[teal]{2025}{\href{https://ura-hq.org/high-energy-physics-user-community/ura-visiting-scholars-program/vsp-awardees/}{Universities Research Association Visiting Scholars Program} (Mar. 2025)}{}{}{}{}{}
-    \tldatecventry[teal]{2024}{\href{https://indico.cern.ch/event/1383972/page/32828-meeting-participants}{CMS IRIS-HEP Analysis Software Training Travel Grant} (Mar. 2024)}{}{}{}{}{}
-    \tldatecventry[teal]{2023}{URA P5 Fermilab Travel Grant (Dec. 2023)}{}{}{}{}{}
-    \tldatecventry[teal]{2021}{Mitchell Undergraduate Research Scholarship (Jun. 2021)}{}{}{}{}{}
-    \tldatecventry[teal]{2021}{\href{https://vsgc.odu.edu/2021-2022awardees/}{Virginia Space Grant Consortium Research Scholarship} (Apr. 2021)}{}{}{}{}{}
+    \tldatecventry[teal]{2026}{Best overall poster presentation (Jun. 2026)}{}{}{}{
+        US CMS meeting at the University of Maryland
+    }{}
+    \tldatecventry[teal]{2026}{\href{https://physics-astronomy.jhu.edu/2026/05/04/student-awards-announced/}{Paul G. Agnew Teaching Award} (May 2026)}{}{}{}{
+        Department teaching award for continued excellence in teaching
+    }{}
+    \tldatecventry[teal]{2026}{\href{https://krieger.jhu.edu/our-community/teaching-award/}{Krieger School of Arts and Sciences Excellence in Teaching Award} (Apr. 2026)}{}{}{}{
+        College-wide teaching award for excellence in teaching by a graduate student
+    }{}
+    \tldatecventry[teal]{2026}{Phenomenology 2026 Symposium Student Travel Award (April 2026)}{}{}{}{
+        Conference travel award to go to the Phenomenology 2026 Symposium
+    }{}
+    \tldatecventry[teal]{2025}{\href{https://lpc.fnal.gov/programs/guests-visitors/current.shtml}{LPC Guest \& Visitor Award} (May 2025)}{}{}{}{
+        Awarded monetary support to be at Fermilab to conduct central shifts at the LHC Physics Center (LPC) and assist with
+        metrology for the outer tracker upgrade
+    }{}
+    \tldatecventry[teal]{2025}{E.J. Rhee Flair in Teaching Award (May 2025)}{}{}{}{
+        Department teaching award for ``creative flair'' in teaching
+    }{}
+    \tldatecventry[teal]{2025}{Kupperman Family Department Travel Grant (May 2025)}{}{}{}{
+        Department award to facilitate travel to summer conferences
+    }{}
+    \tldatecventry[teal]{2025}{\href{https://ura-hq.org/high-energy-physics-user-community/ura-visiting-scholars-program/vsp-awardees/}{Universities Research Association Visiting Scholars Program} (Mar. 2025)}{}{}{}{
+        Universities Research Association (URA) award to stat at Fermilab for June/July 2025
+    }{}
+    \tldatecventry[teal]{2024}{\href{https://indico.cern.ch/event/1383972/page/32828-meeting-participants}{CMS IRIS-HEP Analysis Software Training Travel Grant} (Mar. 2024)}{}{}{}{
+        Awarded monetary support to travel to Princeton university to attend the IRIS-HEP software training as well as the
+        US CMS meeting
+    }{}
+    \tldatecventry[teal]{2023}{URA P5 Fermilab Travel Grant (Dec. 2023)}{}{}{}{
+        Awarded monetary support to travel to the P5 policy plan announcement town hall at Fermilab
+    }{}
+    \tldatecventry[teal]{2021}{Mitchell Undergraduate Research Scholarship (Jun. 2021)}{}{}{}{
+        Awarded a scholarship to conduct research at the University of Virginia under Professor E. Craig Dukes for
+        the Mu2e experiment
+    }{}
+    \tldatecventry[teal]{2021}{\href{https://vsgc.odu.edu/2021-2022awardees/}{Virginia Space Grant Consortium Research Scholarship} (Apr. 2021)}{}{}{}{
+        Awarded a scholarship for conducting research into improving dead-time for the Mu2e experiment
+    }{}
     \tldatecventry[teal]{2021}{SULI Argonne Lab (Jan. 2021)}{}{}{}{
         Offer extended; did not accept
     }
@@ -263,7 +303,7 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     }
 
     \section{Physics Outreach}
-    \tldatecventry[red]{2026}{Johns Hopkins Physics Fair (April 2026)}{}{}{}{
+    \tldatecventry[red]{2026}{Johns Hopkins Physics Fair Volunteer (April 2026)}{}{}{}{
         Part of the LHC Exhibit talking showcasing the cloud chamber and muon detector
     }{}
     \tldatecventry[red]{2026}{Fairfax Science and Engineering Fair Category Judge (March 2026)}{}{}{}{
@@ -272,7 +312,7 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     \tldatecventry[red]{2025}{Johns Hopkins Physics Fair Volunteer (April 2025)}{}{}{}{
         Performed the ``Ping-pong cannon'' demo for local families and talked about shockwaves/air pressure
     }{}
-    
+
     \section{Workshop \& Conference Organizing}
     \tldatecventry[blue]{2026}{LPC EFT Workshop Local Organizing Committee}{}{}{}{
         On the local organizing committee for the LPC EFT workshop held at Johns Hopkins
