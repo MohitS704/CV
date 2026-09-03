@@ -3,7 +3,7 @@
 \moderncvcolor{black}
 
 \usepackage[margin=1in]{geometry}
-\usepackage[firstyear=2014,lastyear=2028,
+\usepackage[firstyear=2018,lastyear=2030,
 marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 \usepackage{url}
 \usepackage{float}
@@ -69,7 +69,11 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 \title{Curriculum Vitae}
 \social[orcid]{0000-0003-3603-9102}
 \social[github]{MohitS704}
-\extrainfo{Ph.D. Candidate at Johns Hopkins University}
+\extrainfo{
+    Ph.D. Candidate at Johns Hopkins University\\
+    Last Updated: \today
+}
+\homepage{https://mohits704.github.io/}
 
 \begin{document}
     \hypersetup{urlcolor=blue}
@@ -98,18 +102,19 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     \section{Analysis Work}
     \tlcventry[red]{2023}{0}{Off-shell Higgs Boson}{CMS Joint 4-Lepton Study Team (CJLST)}
     {}{}{
+        Expert in off-shell Higgs boson analyses on CMS, working towards a full
+        SM EFT interpretation of the off-shell Higgs boson
         \begin{itemize}
-            \item Expert in off-shell analyses on CMS, working towards a full
-            SM EFT interpretation of the off-shell Higgs boson
-            % \item Leading efforts to calculate new k-factors for higher-order behavior in multidimensional space,
-            % as presented in the LHC Higgs Working Group
-            % \item Member of the local organizing committee for the 2026 LHC Physics Center Effective Field Theory (EFT)
-            % at JHU
-            \item Produced leading constraints on the mass and width of the Higgs Boson as well
-            as anomalous Higgs Boson couplings with the CMS detector~\cite{Hayrapetyan_2025}
+            \item Helped produce leading constraints on the width of the Higgs Boson including
+            anomalous terms in gluon-fusion production on CMS~\cite{Hayrapetyan_2025}
             \item Collaborated to include an off-shell Higgs analysis
-            into the CMS Higgs Grand Combination for the first time~\cite{cmscollaboration2026combinedmeasurementsinterpretationshiggs}
-            % \item New off-shell analysis examining Higgs production modes in the off-shell region utilizing SM EFT
+            into the CMS Higgs Grand Combination for the first time by converting Ref.~\cite{Hayrapetyan_2025}
+            into the $\kappa$ framework~\cite{cmscollaboration2026combinedmeasurementsinterpretationshiggs}
+            \item Produced world-leading constraints on light-quark Yukawa couplings, the first
+            direct test of Higgs boson compositeness, and experimental discovery of off-shell Higgs boson production
+            ~\cite{cmscollaboration2026offshellhiggsbosonmeasurements}
+            \item Helped to craft and utilize machine learning methods, as well as a novel, optimal, way
+            to merge bins together to ensure sensitivity in a multidimensional phasespace~\cite{davis2026}
         \end{itemize}
     }
     \tllabelcventry[red]{2022}{2025}{2022--25}{Spin-Parity Analysis of a Tetraquark Candidate}
@@ -135,7 +140,7 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
         \end{itemize}
     }
 
-    \newpage
+    % \newpage
     \section{Technical Work}
     \tlcventry[green]{2025}{0}{Lead Developer/Maintainer}
     {MiLoMerge Package}
@@ -176,11 +181,13 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
             \item Developer for the \href{https://spin.pha.jhu.edu/}{JHUGen Package},
             which includes a Monte Carlo generator as well as a reweighting scheme
             for experimental high-energy physics, with the latest version
-            (v7.5.7) released Dec. 20, 2024
+            (v7.6.0) released Jul. 31, 2026
             \item Created new Python bindings using PyBind11 to release a version of
             JHUGen-MELA in Python
             \item Writing \href{https://spin.pha.jhu.edu/MELA/}{documentation} for the JHUGen-MELA
             package utilizing Doxygen
+            \item Introducing a new set of matrix-element calculations into JHUGen-MELA
+            through the utilization of Madgraph matrix-elements for a range of different processes.
         \end{itemize}
     }
 
@@ -196,6 +203,9 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     }
 
     \section{Public Talks \& Posters}
+    \tldatecventry[orange]{2026}{From Peak to Tail: Probing the Higgs Boson Width and New Physics with Off-Shell Four-Lepton Production}{}{}{}{
+        \href{https://indico.fnal.gov/event/72820/contributions/342707/}{Meeting of the Division of Particles and Fields} -- Fermi National Accelerator Laboratory, IL
+    }{}
     \tldatecventry[orange]{2026}{Binning Bonanza: Metric Design for Quantum Observables and Efficient Dimensionality Reduction}{}{}{}{
         \href{https://indico.global/event/16413/contributions/153912/}{Pheno 2026} -- Pittsburgh, PA
     }{}
@@ -233,7 +243,7 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
         \href{https://vsgc.odu.edu/wp-content/uploads/2022/07/Srivastav.pdf}{Virginia Space Grant Consortium Research Symposium} -- Norfolk, VA
     }{}
     \tldatecventry[orange]{2021}{{Improvements to Cosmic Muon Identification Using Machine Learning}}{}{}{}{
-        \href{https://indi.to/VnVYr}{APS Meeting of the Division of Particles and Fields} -- Florida State University, FL
+        \href{https://indi.to/VnVYr}{Meeting of the Division of Particles and Fields} -- Florida State University, FL
     }{}
 
     % \clearpage
@@ -289,7 +299,7 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
     }{}
 
     \section{Selected Teaching Experience}
-    \tllabelcventry[violet]{2024/8}{2025/12}{ }{Head TA}{Classical Mechanics for Physics Majors}{Fall 2024, 2025}{}{
+    \tllabelcventry[violet]{2024/8}{2026/12}{ }{Head TA}{Classical Mechanics for Physics Majors}{Fall 2024, 2025, 2026}{}{
         Head TA for Physics 1 for Physics Majors
     }
     \tllabelcventry[violet]{2023/8}{2024/5}{ }{TA}{General Physics Lab}{Fall 2023 -- Spring 2024}{}{
@@ -313,7 +323,11 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
         Performed the ``Ping-pong cannon'' demo for local families and talked about shockwaves/air pressure
     }{}
 
-    \section{Workshop \& Conference Organizing}
+    \section{Workshop/Conference Organizing and Professional Development}
+    \tllabelcventry[violet]{2026/9}{2026/12}{2026}{Science Policy and Advocacy for Research Competition (SPARC)}{}{Fall 2026}{}{
+        Accepted member of the SPARC competition organized by the Universities Research Association (URA),
+        to assist ``early career scientists to help bridge the gap between science and the public''.
+    }
     \tldatecventry[blue]{2026}{LPC EFT Workshop Local Organizing Committee}{}{}{}{
         On the local organizing committee for the LPC EFT workshop held at Johns Hopkins
     }{}
@@ -322,6 +336,9 @@ marksyr=0.4ex,marksmo=0.2ex]{moderntimeline}
 
     \tllabelcventry[brown]{2023/5}{2024/9}{2023--24}{Fitness Monitor}{Ralph O'Connor Rec Center}{JHU}{}{
         Helped manage facilities, play music, and interact/help patrons at the gym
+    }
+    \tllabelcventry[brown]{2022/5}{2023/5}{2022--23}{SAT Tutor}{The Answer Class}{Maryland}{}{
+        SAT Tutor leading prep courses in various classes at high schools in the Baltimore area
     }
     \tllabelcventry[brown]{2020/10}{2022/5}{2020--22}{Writer}{The Yellow Journal}{UVA}{}{
         Collaboratively wrote articles and headlines for the Yellow Journal, the University of Virginia's satirical publication
